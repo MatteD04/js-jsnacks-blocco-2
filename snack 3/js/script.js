@@ -3,23 +3,22 @@
 //Partendo da un array di numeri, stampiamo nell’id rosso i numeri dispari e in verde i numeri pari.
 
 //creo un array di numeri
-let numbers = [1,2,3,4,5,6,7,8,9,10];
+const numbers = [1,2,3,4,5,6,7,8,9,10];
 
-const numbContainer = document.querySelector('#...');
+const redDiv = document.querySelector('#rosso');
+const greenDiv = document.querySelector('#verde');
 
 //se i numeri sono pari li stampo nell'id verde
-if((numbers[i] % 2) === 0) {
-    numberState = i
-    numbColor = 'verde'
+for(let i = 0; i < numbers.length; i++) {
+
+  const thisNumber = numbers[i];
+
+
+  if((thisNumber % 2) === 0) {
+    greenDiv.innerHTML += thisNumber + ' ';
 
   //altrimenti stampo i numeri nell'id rosso  
-} else {
-    numberState = i
-    numbColor = 'rosso'
+  } else {
+    redDiv.innerHTML += thisNumber + ' ';
+  }
 }
-
-//stampo in html
-const divLi = `<div id="${numbColor}">${numberState}</div>`;
-
-//... 
-    innerHTML += divLi;
